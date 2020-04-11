@@ -92,7 +92,7 @@ try:
         # If file Doesn't Match any extension
         else :
             dir_name = "others"
-            # If Others folder doesnt exist then create
+            # If Others folder doesnt exist then create.
             if not os.path.exists(dir_name):
                 os.makedirs(dir_name)
             shutil.copy2(filename, dir_name)
