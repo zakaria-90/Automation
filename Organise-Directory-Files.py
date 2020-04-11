@@ -1,5 +1,4 @@
-import os
-import shutil
+import os , shutil
 
 dir_path = os.path.dirname(os.path.realpath(__file__))
 
