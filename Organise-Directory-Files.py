@@ -9,12 +9,12 @@ try:
         if filename.lower().endswith((".py", ".php", ".html" , ".css" , ".js")):
             #Check if this file is Not The Script File itself
             if not __file__.endswith(filename):
-                # If code folder doesnt exist then create
+                # If code folder Not exist then create
                 dir_name = "code"
                 if not os.path.exists(dir_name):
                     os.makedirs(dir_name)
+                    print('{dir_name} : Folder Created Successfully')
                 shutil.move(filename, dir_name)
-                #os.remove(filename)
 
         # Check if files are images and you can add more extentions 
         elif filename.lower().endswith((".png", ".jpg", ".jpeg", ".gif", ".bmp", ".pbm", ".pnm")):
@@ -22,8 +22,8 @@ try:
             dir_name = "images"
             if not os.path.exists(dir_name):
                 os.makedirs(dir_name)
+                print('{dir_name} : Folder Created Successfully')
             shutil.move(filename, dir_name)
-            #os.remove(filename)
 
         # Check if files are music and you can add more extentions
         elif filename.lower().endswith((".wav", ".mp3", ".flac", ".3gp", ".aa", ".aax", ".aiff", ".raw")):
@@ -31,8 +31,8 @@ try:
             dir_name = "music"
             if not os.path.exists(dir_name):
                 os.makedirs(dir_name)
+                print('{dir_name} : Folder Created Successfully')
             shutil.move(filename, dir_name)
-            #os.remove(filename)
 
         # Check if files are videos and you can add more extentions
         elif filename.lower().endswith((".webm", ".mp4")):
@@ -40,8 +40,8 @@ try:
             dir_name = "video"
             if not os.path.exists(dir_name):
                 os.makedirs(dir_name)
+                print('{dir_name} : Folder Created Successfully')
             shutil.move(filename, dir_name)
-            #os.remove(filename)
 
         # Check if files are executables
         elif filename.lower().endswith((".exe", ".msi", ".deb" , "dmg")):
@@ -49,8 +49,8 @@ try:
             dir_name = "executables"
             if not os.path.exists(dir_name):
                 os.makedirs(dir_name)
+                print('{dir_name} : Folder Created Successfully')
             shutil.move(filename, dir_name)
-            #os.remove(filename)
 
         # Check if files are archive files
         elif filename.lower().endswith((".rar", ".tar" , ".zip" , ".gz")):
@@ -58,8 +58,8 @@ try:
             dir_name = "archive"
             if not os.path.exists(dir_name):
                 os.makedirs(dir_name)
+                print('{dir_name} : Folder Created Successfully')
             shutil.move(filename, dir_name)
-            #os.remove(filename)
 
 
         # Check if files are torrent files
@@ -68,8 +68,8 @@ try:
             dir_name = "torrent"
             if not os.path.exists(dir_name):
                 os.makedirs(dir_name)
+                print('{dir_name} : Folder Created Successfully')
             shutil.move(filename, dir_name)
-            #os.remove(filename)
 
         # Check if files are documents
         elif filename.lower().endswith((".txt", ".pdf", ".docx" , "doc")):
@@ -77,9 +77,8 @@ try:
             dir_name = "design-files"
             if not os.path.exists(dir_name):
                 os.makedirs(dir_name)
+                print('{dir_name} : Folder Created Successfully')
             shutil.move(filename, dir_name)
-            #os.remove(filename)
-
 
         # Check if files are design files
         elif filename.lower().endswith((".psd", ".ai")):
@@ -87,9 +86,8 @@ try:
             dir_name = "design-files"
             if not os.path.exists(dir_name):
                 os.makedirs(dir_name)
+                print('{dir_name} : Folder Created Successfully')
             shutil.move(filename, dir_name)
-            #os.remove(filename)
-
 
         # If file Doesn't Match any extension
         else :
@@ -98,9 +96,8 @@ try:
                 # If Others folder doesnt exist then create .
                 if not os.path.exists(dir_name):
                     os.makedirs(dir_name)
+                    print('{dir_name} : Folder Created Successfully')
                 shutil.move(filename, dir_name)
-                #os.remove(filename)'''
-
 
 
 except Exception as e:
