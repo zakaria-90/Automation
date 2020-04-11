@@ -72,12 +72,14 @@ try:
 
         # Check if files are code files
         elif filename.lower().endswith((".py", ".php", ".html" , ".css" , ".js")):
-            # If code folder doesnt exist then create
-            dir_name = "code"
-            if not os.path.exists(dir_name):
-                os.makedirs(dir_name)
-            shutil.copy2(filename, dir_name)
-            os.remove(filename)
+            #Check if this file is Not The Script File itself
+            if not __file__.endswith(filename):
+                # If code folder doesnt exist then create
+                dir_name = "code"
+                if not os.path.exists(dir_name):
+                    os.makedirs(dir_name)
+                shutil.copy2(filename, dir_name)
+                os.remove(filename)
 
         # Check if files are design files
         elif filename.lower().endswith((".psd", ".ai")):
